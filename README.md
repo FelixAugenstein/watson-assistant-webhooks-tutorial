@@ -24,6 +24,14 @@ Copy and paste the `send-email-from-watson-assistant.js` code and configure `smt
 
 If you use Gmail you have to allow less secure apps and also enable the required functionality with the Captcha Enable. Without this, unfortunately the email reminder will not work. You can find detailed instructions [here](https://community.nodemailer.com/using-gmail/).
 
+Now you can test your Cloud Function to make sure everything works fine. Therefore save it and click Invoke with Parameters, provide the input below, and click Apply, then click Invoke. Results are shown in the Activations pane.
+
+`{
+  "reminder": "book flights to Paris", 
+  "email": "felixmeaugenstein@gmail.com", 
+  "conversation_id": "1234–1234–1234"
+}`
+
 ## Set up the Watson Assistant on the IBM Cloud
 
 

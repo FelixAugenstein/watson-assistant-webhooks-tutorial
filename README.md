@@ -18,7 +18,11 @@ Give your action a name, keep the Default Package and choose Node.js as your run
 
 ![Create Cloud Function Action](readme_images/create-cloud-function.png)
 
+Copy and paste the `send-email-from-watson-assistant.js` code and configure `smtpConfig` with your host - for instance `smtp.gmail.com` if you use Gmail and your email and password.
 
+![Configure smtpConfig](readme_images/configure-smtpConfig.png)
+
+If you use Gmail you have to allow less secure apps and also enable the required functionality with the Captcha Enable. Without this, unfortunately the email reminder will not work. You can find detailed instructions [here](https://community.nodemailer.com/using-gmail/).
 
 ## Set up the Watson Assistant on the IBM Cloud
 

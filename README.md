@@ -8,9 +8,20 @@
 3. After you submit your registration, you will receive an e-mail from the IBM Cloud team with details about your account. In this e-mail, you will need to click the link provided to confirm your registration.
 4. Now you should be able to login to your new IBM Cloud account ;-)
 
+## Set up the cloud function
+
+After the login you will see your IBM Cloud Dashboard. Click the Cloud Functions button, then go to Actions and click create, to create a new action.
+
+![Cloud Functions Button](readme_images/cloud-functions-button.png)
+
+Give your action a name, keep the Default Package and choose Node.js as your runtime. Click create.
+
+![Create Cloud Function Action](readme_images/create-cloud-function.png)
+
+
+
 ## Set up the Watson Assistant on the IBM Cloud
 
-## Set up the cloud function
 
 ## If you have any questions just contact me
 Felix Augenstein<br>

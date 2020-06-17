@@ -1,5 +1,5 @@
-<h1 align="center" style="border-bottom: none;">:rocket: IBM Digital Tech Tutorial: Voice Agent</h1>
-<h3 align="center">In this hands-on tutorial you will create a new Voice Agent with Watson on the IBM Cloud that can listen and respond directly to customers using natural language over the telephone.</h3>
+<h1 align="center" style="border-bottom: none;">:rocket: IBM Digital Tech Tutorial: Cloud Functions</h1>
+<h3 align="center">In this hands-on tutorial you will create a Watson Assistant that is able to send you a reminder via e-mail. You can tell Watson to "add a reminder to buy milk", Watson confirms the reminder, and the reminder is sent via e-mail to the destination email you provided.</h3>
 
 ## Prerequisites
 

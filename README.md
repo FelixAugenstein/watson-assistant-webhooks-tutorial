@@ -28,8 +28,8 @@ Now you can test your Cloud Function to make sure everything works fine. Therefo
 
 ```
 {
-  "reminder": "book flights to Paris", 
-  "email": "felixmeaugenstein@gmail.com", 
+  "reminder": "buy milk", 
+  "email": "YOUR-DESTINATION-EMAIL-HERE", 
   "conversation_id": "1234–1234–1234"
 }
 ```

@@ -22,7 +22,7 @@ Copy and paste the `send-email-from-watson-assistant.js` code and configure `smt
 
 ![Configure smtpConfig](readme_images/configure-smtpConfig.png)
 
-If you use Gmail you have to allow less secure apps and also enable the required functionality with the Captcha Enable. Without this, unfortunately the email reminder will not work. You can find detailed instructions [here](https://community.nodemailer.com/using-gmail/).
+If you use Gmail you have to allow less secure apps and also enable the required functionality with Captcha Enable. Without this, unfortunately the email reminder will not work. You can find detailed instructions about sending email with Node.js  [here](https://community.nodemailer.com/using-gmail/).
 
 Now you can test your Cloud Function to make sure everything works fine. Therefore save it and click Invoke with Parameters, provide the input below, and click Apply, then click Invoke. Results are shown in the Activations pane.
 
@@ -51,6 +51,10 @@ Afterwards launch your Watson Assistant Service, you will find it on your dashbo
 Go to skills and create a new skill, when asked choose the dialog skill. Select import skill and upload the `skill-Email-Reminder.json` file.
 
 ![Import Skill](readme_images/import-skill.png)
+
+Click options and then select Webhooks. Provide the Web Action URL you obtained when creating the Endpoint. Make sure to add a `.json` at the end.
+
+![Add Webhook](readme_images/add-webhook.png)
 
 ## If you have any questions just contact me
 Felix Augenstein<br>

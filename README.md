@@ -22,7 +22,7 @@ Copy and paste the `send-email-from-watson-assistant.js` code and configure `smt
 
 ![Configure smtpConfig](readme_images/configure-smtpConfig.png)
 
-If you use Gmail you have to allow less secure apps and also enable the required functionality with Captcha Enable. Without this, unfortunately the email reminder will not work. You can find detailed instructions about sending email with Node.js  [here](https://community.nodemailer.com/using-gmail/).
+If you use Gmail you have to allow less secure apps and also enable the required functionality with Captcha Enable. Without this, unfortunately the email reminder will not work. You can find detailed instructions about sending emails with Node.js  [here](https://community.nodemailer.com/using-gmail/).
 
 Now you can test your Cloud Function to make sure everything works fine. Therefore save it and click Invoke with Parameters, provide the input below, and click Apply, then click Invoke. Results are shown in the Activations pane.
 
@@ -56,7 +56,7 @@ Click options and then select Webhooks. Provide the Web Action URL you obtained 
 
 ![Add Webhook](readme_images/add-webhook.png)
 
-Now you can go to the dialog and to the corresponding node to provide your destination-email. When using the `@` character inside the parameter value, it must contain a double backslash `\\` afterwards, because the @ is a syntax for entities. Then you can try it and send a reminder to yourself. Under customize you can enable or disenable webhooks.
+Now you can go to the dialog and to the corresponding node to provide your destination-email. When using the `@` character inside the parameter value, it must contain a double backslash `\\` afterwards, because the @ is a syntax for entities. Then you can try it and send a reminder to yourself. Under customize you can enable or disable webhooks.
 
 ![Provide Destination Email](readme_images/provide-destination-email.png)
 

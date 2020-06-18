@@ -38,6 +38,15 @@ Now you can test your Cloud Function to make sure everything works fine. Therefo
 
 ## Set up the Watson Assistant on the IBM Cloud
 
+In your IBM Cloud Account go to the dashboard by clicking the IBM Logo in the upper left. Select the AI / Machine Learning category under services or search for Watson Assistant. Then create a new Watson Assistant service, the Lite Plan should work for this tutorial. 
+
+![Create Watson Assistant](readme_images/create-watson-assistant.png)
+
+Afterwards launch your Watson Assistant Service, you will find it on your dashboard under services.
+
+Go to skills and create a new skill, when asked choose the dialog skill. Select import skill and upload the `skill-Email-Reminder.json` file.
+
+![Import Skill](readme_images/import-skill.png)
 
 ## If you have any questions just contact me
 Felix Augenstein<br>

@@ -36,6 +36,10 @@ Now you can test your Cloud Function to make sure everything works fine. Therefo
 
 ![Test Cloud Function](readme_images/test-cloud-function.png)
 
+Go to Endpoints, enable it as a Web Action, save and copy the provided URL. You will need it later on, when setting up your Watson Assistant.
+
+![Create Endpoint](readme_images/create-endpoint.png)
+
 ## Set up the Watson Assistant on the IBM Cloud
 
 In your IBM Cloud Account go to the dashboard by clicking the IBM Logo in the upper left. Go to Catalog and select the AI / Machine Learning category under services or search for Watson Assistant. Then create a new Watson Assistant service, the Lite Plan should work for this tutorial. 

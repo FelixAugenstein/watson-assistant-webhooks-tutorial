@@ -60,6 +60,8 @@ Now you can go to the dialog and to the corresponding node to provide your desti
 
 ![Provide Destination Email](readme_images/provide-destination-email.png)
 
+![Try it Out](readme_images/try-it-out.png)
+
 ## If you have any questions just contact me
 Felix Augenstein<br>
 Digital Tech Ecosystem & Developer Representative @IBM<br>

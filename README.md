@@ -56,6 +56,10 @@ Click options and then select Webhooks. Provide the Web Action URL you obtained 
 
 ![Add Webhook](readme_images/add-webhook.png)
 
+Now you can go to the dialog and to the corresponding node to provide your destination-email. When using the `@` character inside the parameter value, it must contain a double backslash `\\` afterwards, because the @ is a syntax for entities. Then you can try it and send a reminder to yourself. Under customize you can enable or disenable webhooks.
+
+![Provide Destination Email](readme_images/provide-destination-email.png)
+
 ## If you have any questions just contact me
 Felix Augenstein<br>
 Digital Tech Ecosystem & Developer Representative @IBM<br>

@@ -38,7 +38,7 @@ Now you can test your Cloud Function to make sure everything works fine. Therefo
 
 Go to Endpoints, enable it as a Web Action, save and copy the provided URL. You will need it later on, when setting up your Watson Assistant.
 
-![Create Endpoint](readme_images/create-endpoint.png)
+![Create Endpoint Web Action](readme_images/create-endpoint-web-action.png)
 
 ## Set up the Watson Assistant on the IBM Cloud
 

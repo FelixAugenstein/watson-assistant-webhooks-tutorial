@@ -1,0 +1,418 @@
+{
+  "intents": [
+    {
+      "intent": "response_no",
+      "examples": [
+        {
+          "text": "nope"
+        },
+        {
+          "text": "forget it"
+        },
+        {
+          "text": "I don't think so"
+        },
+        {
+          "text": "nah"
+        },
+        {
+          "text": "quit"
+        },
+        {
+          "text": "exit"
+        },
+        {
+          "text": "incorrect"
+        },
+        {
+          "text": "not right"
+        },
+        {
+          "text": "not really"
+        },
+        {
+          "text": "scratch that"
+        },
+        {
+          "text": "that's wrong"
+        },
+        {
+          "text": "no"
+        },
+        {
+          "text": "not"
+        }
+      ]
+    },
+    {
+      "intent": "response_yes",
+      "examples": [
+        {
+          "text": "of course"
+        },
+        {
+          "text": "that's right"
+        },
+        {
+          "text": "sounds good"
+        },
+        {
+          "text": "yah"
+        },
+        {
+          "text": "yup"
+        },
+        {
+          "text": "I suppose"
+        },
+        {
+          "text": "I guess"
+        },
+        {
+          "text": "okie dokie"
+        },
+        {
+          "text": "yes"
+        },
+        {
+          "text": "correct"
+        },
+        {
+          "text": "exactly"
+        },
+        {
+          "text": "sure"
+        },
+        {
+          "text": "perfect"
+        },
+        {
+          "text": "ok"
+        },
+        {
+          "text": "okay"
+        },
+        {
+          "text": "right"
+        }
+      ]
+    },
+    {
+      "intent": "add_reminder",
+      "examples": [
+        {
+          "text": "can you remind me to put the clothes in the dryer when I get home?"
+        },
+        {
+          "text": "I need to talk to John tonight, can you remind me?"
+        },
+        {
+          "text": "remind me to look for flights for Florida"
+        },
+        {
+          "text": "remind me to take out the trash"
+        },
+        {
+          "text": "can you remind me to call the doctor tomorrow?"
+        },
+        {
+          "text": "I need to remember to pay the bills tonight"
+        }
+      ],
+      "description": "Create a reminder to do something. I'll send myself an email."
+    },
+    {
+      "intent": "response_change",
+      "examples": [
+        {
+          "text": "I want to modify"
+        },
+        {
+          "text": "I want to set a different one"
+        },
+        {
+          "text": "no, let me tell you again"
+        },
+        {
+          "text": "no, I want to do it again"
+        },
+        {
+          "text": "let's try again"
+        },
+        {
+          "text": "no, I want to change it"
+        },
+        {
+          "text": "I want to rewrite it"
+        },
+        {
+          "text": "change it"
+        },
+        {
+          "text": "modify"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "https://eu-gb.functions.cloud.ibm.com/api/v1/web/felix.augenstein_FA%20dev/default/send-email-from-watson-assistant.json",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "No, change it",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "OK, we can change it... What would you want me to remind you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1546530407565",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_2_1546542011168"
+      },
+      "conditions": "#response_change",
+      "dialog_node": "node_1_1546532166373",
+      "previous_sibling": "node_1_1546534141746"
+    },
+    {
+      "type": "standard",
+      "title": "No, cancel",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "OK, I'll be here in case you'd like me to send you any other reminders..."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1546530407565",
+      "metadata": {},
+      "conditions": "true",
+      "dialog_node": "node_2_1546532432186",
+      "previous_sibling": "node_1_1546532166373"
+    },
+    {
+      "type": "standard",
+      "title": "Yes, send email reminder",
+      "parent": "node_5_1546530407565",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "email": "YOUR-DESTINATION-EMAIL-HERE",
+            "reminder": "$reminder",
+            "conversation_id": "1234–1234–1234"
+          },
+          "result_variable": "webhook_result_1"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#response_yes",
+      "dialog_node": "node_1_1546534141746"
+    },
+    {
+      "type": "standard",
+      "title": "Confirm reminder",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You'd like me to remind you $reminder. Is that right?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "Yes, that's tright",
+                "value": {
+                  "input": {
+                    "text": "yes"
+                  }
+                }
+              },
+              {
+                "label": "No, I want to change it",
+                "value": {
+                  "input": {
+                    "text": "change"
+                  }
+                }
+              },
+              {
+                "label": "No, forget it",
+                "value": {
+                  "input": {
+                    "text": "no"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_4_1546530022022",
+      "metadata": {},
+      "conditions": "$reminder != null",
+      "dialog_node": "node_5_1546530407565",
+      "previous_sibling": "node_2_1546542011168"
+    },
+    {
+      "type": "standard",
+      "title": "Set reminder",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_4_1546530022022",
+      "context": {
+        "reminder": "<? input.text.extract('to [a-zA-Z0-9\\s]+',0) ?>"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1546530407565"
+      },
+      "conditions": "true",
+      "dialog_node": "node_2_1546542011168"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Uh oh... something happened... Try again later..."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1546534141746",
+      "conditions": "anything_else",
+      "dialog_node": "response_3_1592337547340",
+      "previous_sibling": "response_2_1592337545724"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Cool! I just sent you an e-mail reminder ;-)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1546534141746",
+      "conditions": "$webhook_result_1",
+      "dialog_node": "response_2_1592337545724"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry, I didn't get that. Right now, I can only help you with reminders. You can say something like 'remind me to call Mom' or 'can you remind me to take out the trash?'..."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_4_1546530022022"
+    },
+    {
+      "type": "folder",
+      "title": "Send reminder",
+      "metadata": {},
+      "conditions": "#add_reminder",
+      "dialog_node": "node_4_1546530022022",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi! How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "welcome",
+      "digress_in": "not_available",
+      "dialog_node": "Welcome",
+      "digress_out": "allow_all"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    }
+  },
+  "learning_opt_out": false,
+  "name": "Email Reminder",
+  "language": "en",
+  "description": ""
+}

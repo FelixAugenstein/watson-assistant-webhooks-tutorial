@@ -34,6 +34,8 @@ Now you can test your Cloud Function to make sure everything works fine. Therefo
 }
 ```
 
+![Test Cloud Function](readme_images/test-cloud-function.png)
+
 ## Set up the Watson Assistant on the IBM Cloud
 
 

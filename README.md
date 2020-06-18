@@ -38,7 +38,7 @@ Now you can test your Cloud Function to make sure everything works fine. Therefo
 
 ## Set up the Watson Assistant on the IBM Cloud
 
-In your IBM Cloud Account go to the dashboard by clicking the IBM Logo in the upper left. Select the AI / Machine Learning category under services or search for Watson Assistant. Then create a new Watson Assistant service, the Lite Plan should work for this tutorial. 
+In your IBM Cloud Account go to the dashboard by clicking the IBM Logo in the upper left. Go to Catalog and select the AI / Machine Learning category under services or search for Watson Assistant. Then create a new Watson Assistant service, the Lite Plan should work for this tutorial. 
 
 ![Create Watson Assistant](readme_images/create-watson-assistant.png)
 

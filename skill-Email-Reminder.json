@@ -164,7 +164,7 @@
   },
   "webhooks": [
     {
-      "url": "https://eu-gb.functions.cloud.ibm.com/api/v1/web/felix.augenstein_FA%20dev/default/send-email-from-watson-assistant.json",
+      "url": "",
       "name": "main_webhook",
       "headers": []
     }

@@ -8,7 +8,7 @@
 3. After you submit your registration, you will receive an e-mail from the IBM Cloud team with details about your account. In this e-mail, you will need to click the link provided to confirm your registration.
 4. Now you should be able to login to your new IBM Cloud account ;-)
 
-## Digital Tech Tutorial Watson Assistant Webhooks Part I and II
+## Digital Tech Tutorial Watson Assistant Webhooks Part I and II  
 
 This tutorial consists of 2 parts, you can start with part I or II.<br>
 [Part I - Watson sends a reminder via e-mail](https://github.com/FelixAugenstein/watson-assistant-webhooks-tutorial)<br>

@@ -50,7 +50,7 @@ Go to Endpoints, enable it as a Web Action, save and copy the provided URL. You 
 
 In your IBM Cloud Account go to the dashboard by clicking the IBM Logo in the upper left. Go to Catalog and select the AI / Machine Learning category under services or search for Watson Assistant. Then create a new Watson Assistant service, the Lite Plan should work for this tutorial. 
 
-![Create Watson Assistant](readme_images/create-watson-assistant.png)
+![Create Watson Assistant](readme_images/select-watson-assistant.png)
 
 Afterwards launch your Watson Assistant Service, you will find it on your dashboard under services.
 

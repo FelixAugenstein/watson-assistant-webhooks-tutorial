@@ -18,7 +18,7 @@ This tutorial consists of 2 parts, you can start with part I or II.<br>
 
 After the login you will see your IBM Cloud Dashboard. Click the Cloud Functions button, then go to Actions and click create, to create a new action.
 
-![Cloud Functions Button](readme_images/cloud-functions-button.png)
+![Cloud Functions Button](readme_images/select-cloud-functions.png)
 
 Give your action a name, keep the Default Package and choose Node.js as your runtime. Click create.
 
